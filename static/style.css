@@ -1,0 +1,21 @@
+
+/* This is login.html style css file */
+
+/* login background */
+.bk {
+    background-image: url("../images/loginbk.jpg");
+    background-size:cover;
+    background-position:bottom;
+    background-attachment: fixed;
+}
+
+/* login container style */
+.login-container{ 
+    min-height: 70vh; 
+    display: flex;
+    align-items: center;
+}
+
+.opacity{
+    opacity:0.8
+}
