@@ -1,3 +1,14 @@
+/*create a font for logo*/
+@font-face {
+    font-family: Pacifico;
+    src:url(../fonts/Pacifico/Pacifico-Regular.ttf)
+}
+
+.logo {
+    font-family:Pacifico;
+    font-size: 23pt;
+}
+
 
 /* This is login.html style css file */
 
