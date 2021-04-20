@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<title>Content</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Happy Study Statistics</h1>
+    <p>Before begin study statistics, we first need to know what is statistics. </p>
+    <hr>
+    <h2>1. What is Statistics</h2>
+    <p>Statistics is the science concerned with developing and studying methods 
+        for collecting, analyzing, interpreting and presenting empirical data. <br>
+        Statistics are very important in our modern worlds:
+    </p>
+    <ul>
+        <li>It gives us a way to transform data into information and information into practice</li>
+        <li>Able to extract important information from data by manipulating the data</li>
+        <li>Understanding statistics, even at a basic level, is as vital as literacy in today’s world.</li>
+    </ul>
+</div>
+<div class="container">
+    <hr>
+    <h2>2. Basic Statistics</h2>
+    <p>Basic Statistics is mainly about doing descriptive statistics. Descriptive statistics is one part of statistics that 
+        involves organizing, describing and displaying data. It is mainly about finding the central tendency of the data and 
+        data variability. 
+    </p>
+    <h3>2.1. Central Tendency</h3>
+    <p>There are 3 main ways of measure data central tendency includes mean, median and mode.
+        <ul>
+            <li>Mean sometimes often called average. To find the mean, you need to take the whole set of data and the summation of the data.
+                After that, divide the sum by the number of each data that are in the dataset <br>
+                For example: Find the mean of the following dataset:
+                56,35,45,67,12,24,48,55,58,30 <br><br>
+                <math><mfrac>
+                    <mi> 56+35+45+67+12+24+48+55+58+30 </mi>
+                    <mi> 10 </mi></mfrac>
+                </math><br><br>
+                <math><mfrac>
+                    <mi> 430 </mi>
+                    <mi> 10 </mi></mfrac>
+                </math>  
+                = 43 <br><br>
+                Mean = 43   
+            </li>
+            <li>
+                Median is the middle number in the whole dataset. In order to find median, we will need to sort data in ascending orders.<br>
+                If the data is odd number: 56,35,45,67,12,24,48 <br><br>
+                = 12, 24, 35, 45, 48, 56, 67 <br><br>
+                <math><mfrac>
+                    <mi> 7 </mi>
+                    <mi> 2 </mi></mfrac>
+                </math><br><br>
+                = 3.5 = 4. So the number in the forth position. which is 45 <br><br>
+                Median = 45 <br><br>
+                If the data is even number: 56,35,45,67,12,24,48,55 <br><br>
+                <math><mfrac>
+                    <mi> 8 </mi>
+                    <mi> 2 </mi></mfrac>
+                </math><br><br>
+                = 4. However, in this case, we need to use number in position 4 and 5 and get the median. <br><br>
+                <math><mfrac>
+                    <mi> 45 + 48 </mi>
+                    <mi> 2 </mi></mfrac>
+                </math><br><br>
+                Median = 46.5
+            </li>
+            <li>Mode is the data that have the highest frequency <br><br>
+                For example:2,5,6,2,2,2,5,6,2 <br><br>
+                Mode = 2
+            </li>
+        </ul>
+    </p>
+    <h3>2.2 Data variability</h3>
+    <p>
+        There are 2 main ways to calculate the data variability, which are range and variance (or standard deviation). 
+        <ul>
+            <li>Range is the most straight forward and simplest to understand in measuring variability. The range of the dataset is the 
+                dataset is the difference between minimun and maximum in the data. Therefore, we need to sort the data into asecending order. <br><br>
+                For example: Find the range for dataset:20,21,22,25,26,29,33,34,38 <br>
+                Range = 38 -20 = 18. <br>
+                The bigger the range, the more variability the dataset is. However, range is simple and based on 2 numbers which makes it susceptible to outliers. It is also not a good idea 
+                to use range to compare 2 dataset with different sample size. <br>
+            </li>
+            <li>Varaince which is the sqaured of standard deviation, is the average sqaured difference from mean. Unlike range, variance includes all value and compare to mean.
+                To calculate this statistic, you calculate a set of squared differences between the data points and the mean, sum them, and then divide by the number of observations. 
+                Hence, it’s the average squared difference. Moreover, the way you calculate the variance are different between population variance and sample variance.
+            </li>
+        </ul>
+    </p>
+</div>
+<div class="container">
+    <hr>
+    <h2>3.Different plots used in Statistics</h2>
+    <p>Different plots are used for different purposes. For quantitative data: we usually will use histogram, scatterplot,box-plot.
+        For qualitative data: we usually will use bar plot. 
+        <ol>
+            <li>Histogram: it is used to show the disribution of data. </li>
+            <canvas id="histogram"></canvas> <br><br>
+            <li>Scatterplot: it is used to check whether there is a relationship between 2 datatset</li>
+            <canvas id="scatterplot"></canvas> <br><br>
+        </ol>
+    </p>
+</div>
+{% endblock %}  
