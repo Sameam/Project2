@@ -8,3 +8,7 @@ def index():
 @app.route("/content")
 def content():
     return render_template("content.html", title="Content")
+
+@app.route("/login")
+def login():
+    return render_template("register.html", title="Register")
