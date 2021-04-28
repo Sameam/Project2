@@ -2,7 +2,6 @@
 
 {% block head %}
 {{ super() }}
-<title>Home</title>
 {% endblock %}
 
 
@@ -17,7 +16,6 @@
         <li>Basic Statistics Calculation</li>
         <li>Different plot used in Statistics</li>
         <li>Combination and Permutation</li>
-        <li>Finding the odd</li>
         <li>Probabilities of events</li>
     </ol>
     <p>This websites is made for everyone from students with no statistics backgrounds to someone who is want to expand their knowledge in statistics. 
@@ -29,4 +27,5 @@
     <hr>
     <p>This websites founder is Nara Eam and Yao Jing. We are a master student at University of Western Australia, major in Information Technology.</p>
 </div> 
-{% endblock %}     
+{% endblock %}  
+{% block script %} {{ super() }} {% endblock %}   

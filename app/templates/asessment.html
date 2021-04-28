@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
+        <title>{{ title }}</title>
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--CSS-->
+        <link rel="stylesheet" href="../static/style.css" type='text/css'/>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'/>
+    </head>
+    <body>
+        <!--nav bar-->
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand logo" href="#">FS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('index')}}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Content
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ url_for('content')}}">Section</a>
+                                <a class="dropdown-item" href="#Basic">Basic</a>
+                                <a class="dropdown-item" href="#plot">Plots</a>
+                                <a class="dropdown-item" href="#combination">Permutation</a>
+                                <a class="dropdown-item" href="#probability">Probability</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Assessment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Result</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Feedback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Overall</a>
+                        </li>
+                  </ul>
+                </div>
+                
+                <a class="nav-link" href="{{ url_for('logout') }}">logout</a>
+                <a class="nav-link" href="{{ url_for('signup') }}">Sign up</a>
+            </nav>
+        </div>
+        <!--end of navbar-->
+        <div class="container">
+            <h2>Quiz!</h2>
+            <p>There are 10 questions in this quiz which are mainly multiple choice questions to test your understanding about basic statistics.
+                All the questions will be able to refer to the content page for further references. <br><br>
+                Please Select One of the Answer below 
+            </p>
+            <p>Q1. How to find central tendancy in the dataset? <br>
+                <input type="radio" name="q1_A" id="q1_A" value="">
+                <label for="q1_A">A. Mean Median Mode</label> <br>
+                <input type="radio" name="q1_B" id="q1_B" value=""> 
+                <label for="q1_B">B. Mean</label> <br>
+                <input type="radio" name="q1_C" id="q1_C" value=""> 
+                <label for="q1_C">C. Standard deviation</label> <br>
+                <input type="radio" name="q1_D" id="q1_D" value=""> 
+                <label for="q1_D">D. Varaince </label> <br>
+            </p>
+            <p>Q2. Find the mean and median of the following dataset:  <br>
+                Dataset = 25,89,90,5,34,32,67,89,90 <br> <br>
+                <input type="radio" name="q2_A" id="q2_A" value="">
+                <label for="q2_A">A. Mean=54.89 Median=33</label> <br>
+                <input type="radio" name="q2_B" id="q2_B" value=""> 
+                <label for="q2_B">B. Mean=34 Median=34</label> <br>
+                <input type="radio" name="q2_C" id="q2_C" value=""> 
+                <label for="q2_C">C. Mean=57.89 Median=67</label> <br>
+                <input type="radio" name="q2_D" id="q2_D" value=""> 
+                <label for="q2_D">D. Mean=5 Median=67 </label> <br>
+            </p>
+            <p>Q3. Scenario: In your wallet, you have 5 10$ cash and 10 20$ cash? You want to find the probability whether when 
+                you take out the money is a 10$ or 20$ paper? What is this kind of probability event?   <br>
+                <input type="radio" name="q3_A" id="q3_A" value="">
+                <label for="q3_A">A. Independence Event</label> <br>
+                <input type="radio" name="q3_B" id="q3_B" value=""> 
+                <label for="q3_B">B. Dependence Event</label> <br>
+                <input type="radio" name="q3_C" id="q3_C" value=""> 
+                <label for="q3_C">C. Inclusive Event</label> <br>
+                <input type="radio" name="q3_D" id="q3_D" value=""> 
+                <label for="q3_D">D. Mutually Exclusive Event</label> <br>
+            </p>
+            <p>Q4. Scenario: The probabilities of three teams A, B and C winning a badminton competition are 
+                1/3, 1/5 and 1/9 respectively. Find the probability either A or B or C will win <br>
+                <input type="radio" name="q4_A" id="q4_A" value="">
+                <label for="q4_A">A. <math><mfrac><mi> 1 </mi><mi> 3 </mi></mfrac></math></label> <br>
+                <input type="radio" name="q4_B" id="q4_B" value=""> 
+                <label for="q4_B">B. <math><mfrac><mi> 1 </mi><mi> 5 </mi></mfrac></math></label> <br>
+                <input type="radio" name="q4_C" id="q4_C" value=""> 
+                <label for="q4_C">C. <math><mfrac><mi> 29 </mi><mi> 45 </mi></mfrac></math></label> <br>
+                <input type="radio" name="q4_D" id="q4_D" value=""> 
+                <label for="q4_D">D. <math><mfrac><mi> 7 </mi><mi> 15 </mi></mfrac></math></label> <br>
+            </p>
+            <p>Q5. From the graph, what is the type of graph and information?<br>
+                <canvas id="histogram"></canvas> <br><br> 
+                <input type="radio" name="q5_A" id="q5_A" value="">
+                <label for="q5_A">A. Histogram, Normal Distribution</label> <br>
+                <input type="radio" name="q5_B" id="q5_B" value=""> 
+                <label for="q5_B">B. Scatterplot, Positive Relationship</label> <br>
+                <input type="radio" name="q5_C" id="q5_C" value=""> 
+                <label for="q5_C">C. Bar plot, Categorical </label> <br>
+                <input type="radio" name="q5_D" id="q5_D" value=""> 
+                <label for="q5_D">D. Box plot, Outlier</label> <br>
+            </p>
+        </div>
+
+        <hr>
+        <footer class="container">
+            <p>Contact Us</p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+        <script src="../static/main.js"></script>
+    </body>
+</html>        

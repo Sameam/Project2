@@ -1,6 +1,5 @@
 // drawing a histogram
 const ctx = document.getElementById('histogram').getContext('2d');
-
 const chart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -35,6 +34,7 @@ const chart = new Chart(ctx, {
   }
 });
 
+// creating a scatterplot
 const data1 = [
     { x: 10000, y: 1100 },
      { x: 11000, y: 1200 },
@@ -109,4 +109,6 @@ var myScatter = Chart.Scatter(scatter, {
     }
   }
 });
+
+
 

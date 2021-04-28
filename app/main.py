@@ -11,4 +11,8 @@ def content():
 
 @app.route("/login")
 def login():
-    return render_template("register.html", title="Register")
+    return render_template("login.html", title="Login")
+
+@app.route("/signup")
+def signup():
+    return render_template("register.html", title="Signup")
