@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Project2 Login</title>
+        <title>{{ title }}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -24,7 +24,7 @@
                         <div class="container-fluid bg-warning opacity">
                             <h2>Welcome</h2>
                             <p>Sweat in exchange for harvest， study to obtain the knowledge.</p><br>
-                            <form action="#" method="post" >
+                            <form action="" method="post" >
                                 <div class="form-group">
                                 <label for="usr">Name:</label>
                                 <input type="text" class="form-control" id="usr">
@@ -35,7 +35,7 @@
                                 </div>
                             </form>
                             <button type="submit" class="btn btn-default">Submit</button>
-                            <p class="note pull-right"><a href="register.html">register</a></p><br><br>
+                            <p class="note pull-right"><a href="{{ url_for('signup')}}">register</a></p><br><br>
                         </div>
                     </div>   
                 </div>

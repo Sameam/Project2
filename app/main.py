@@ -1,4 +1,4 @@
-from app import app
+from flask import request
 from flask import Flask,render_template, url_for,request,flash
 
 app = Flask(__name__)
@@ -13,9 +13,9 @@ def content():
 
 @app.route("/login")
 def login():
-    return render_template("register.html", title="Register")
+    return render_template("login.html", title="Login")
 
-@app.route("/templates/register",method=['GET','POST'])
+@app.route("/register",methods=['GET','POST'])
 def register():
     if request.method == 'POST':
         username = request.form.get('name')
@@ -31,4 +31,9 @@ def register():
             
     return render_template('register.html')
 
+@app.route("/signup")
+def signup():
+    return render_template("register.html", title="Signup")
 
+if __name__=='__main__':
+    app.run(debug=True)
