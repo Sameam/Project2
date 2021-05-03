@@ -9,8 +9,13 @@
     font-size: 23pt;
 }
 
-.navbar {
-    background-color: red;
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.color {
+    background-color:lightblue
 }
 
 
@@ -18,7 +23,7 @@
 
 /* login background */
 .bk {
-    background-image: url('static/images/loginbk.jpg');
+    background-image: url('../static/images/loginbk.jpg');
     background-size:cover;
     background-position:bottom;
     background-attachment: fixed;
