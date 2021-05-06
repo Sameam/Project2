@@ -9,26 +9,31 @@ class LoginForm(FlaskForm):
     remember_me = BooleanField('Remember Me')
     submit = SubmitField('Sign In')
 
+    def validate_name(self, name):
+        user = User.query.filter_by(name=name.data).first()
+        if user is None:
+            raise ValidationError('Your username is wrong, please input correctly name')
+
 class RegistrationForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     password2 = PasswordField(
-        'Repeat Password', validators=[DataRequired(), EqualTo('password')])
+        'Confirm Password', validators=[DataRequired(), EqualTo('password')])
     telephone = IntegerField('Telephone', validators=[DataRequired()])
     submit = SubmitField('Register')
 
     def validate_name(self, name):
         user = User.query.filter_by(name=name.data).first()
         if user is not None:
-            raise ValidationError('Please use a different name.')
+            raise ValidationError('This name already exists. Please use a different name.')
 
     def validate_email(self, email):
         user = User.query.filter_by(email=email.data).first()
         if user is not None:
-            raise ValidationError('Please use a different email address.')
+            raise ValidationError('This email address has already been registered. Please use a different email address.')
     
     def validate_telephone(self, telephone):
         user = User.query.filter_by(phone=telephone.data).first()
         if user is not None:
-            raise ValidationError('Please use a different telephone.')
+            raise ValidationError('This telephone has already been registered. Please use a different telephone.')
