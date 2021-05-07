@@ -56,5 +56,24 @@ def signup_post():
 def logout():
     logout_user()
     return redirect(url_for("index"))
-    
+
+@app.route("/asessment")
+@login_required
+def asessment():
+    return render_template("asessment.html", title="Quiz")
+
+@app.route("/progress")
+@login_required
+def progress():
+    return render_template("progress.html", title="Progress",user=current_user.name)
+
+@app.route("/result")
+@login_required
+def result():
+    return render_template("result.html", title="Result",name= current_user.name, id= current_user.id)
+
+@app.route("/user")
+@login_required 
+def user():
+    return render_template("user.html", title="User", name=current_user.name, id=current_user.id)
     

@@ -26,10 +26,19 @@ This table includes 2 parts, part that are finished and still working on
  * work on design of the content page, opening page and question
  * design on navigation bar
  * work on readMe.md
+ * need to write test on register and login 
+
 
 
 
 | Section | Comment | Conclusion |
 |:--------|:-------:|-----------:|
-| connect to CSS | for styling | Still working |
-| design | for navbar, opening, content | still working | 
+| connect to CSS | for styling | Completed |
+| design | for navbar, opening, content | half completed | 
+| unit_testing | for login, signup | still working |
+| user_testing | for front_end | still working |
+| system_testing | for whole system | still working |
+| button return back to opening page | for login and signup | completed | 
+| work on quiz | interactive and different levels | still working |
+| create a table | for admin and user to see score | still working | 
+| 

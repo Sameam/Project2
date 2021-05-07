@@ -5,9 +5,9 @@ const chart = new Chart(ctx, {
   data: {
     labels: [0,1, 2, 3, 4, 5,6,7,8,9],
     datasets: [{
-      label: 'Number of Arrivals',
+      label: 'Age groups',
       data: [3,6,19, 28, 32, 26,17,5,2],
-      backgroundColor: 'blue',
+      backgroundColor: 'red',
     }]
   },
   options: {
@@ -110,5 +110,26 @@ var myScatter = Chart.Scatter(scatter, {
   }
 });
 
+// bar chart 
 
-
+const bar = document.getElementById('barplot').getContext('2d');
+const plot = new Chart(bar, {
+  type: 'bar',
+  data: {
+    labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+    datasets: [
+      {
+        label: "Population (millions)",
+        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+        data: [2478,5267,734,784,433]
+      }
+    ]
+  },
+  options: {
+    legend: { display: false },
+    title: {
+      display: true,
+      text: 'Predicted world population (millions) in 2050'
+    }
+  }
+});
