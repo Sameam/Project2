@@ -9,11 +9,6 @@ class LoginForm(FlaskForm):
     remember_me = BooleanField('Remember Me')
     submit = SubmitField('Sign In')
 
-    def validate_name(self, name):
-        user = User.query.filter_by(name=name.data).first()
-        if user is None:
-            raise ValidationError('Your username is wrong, please input correctly name')
-
 class RegistrationForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
