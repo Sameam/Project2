@@ -2,6 +2,7 @@
 
 {% block head %}
 {{ super() }}
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
 <link rel="stylesheet" href="../static/css/style.css" type='text/css'/>
 {% endblock %}
@@ -54,9 +55,9 @@
     </a>          
 </div> 
 <main id="main">
-    <!-- =======  Navigation bar for section ======= -->
+    <!-- =======  tab bar for sub section ======= -->
     <div class="container">
-        <ul class="nav nav-tabs row d-flex">
+        <ul class="nav nav-tabs sticky-top row d-flex">
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <h4 class="navigation">Basic Statistics</h4>
@@ -78,6 +79,7 @@
             </a>
           </li>
         </ul>
+        <!-- =======  end of tab bar ======= -->
         <!-- To create each section -->
         <div class="tab-content" data-aos="fade-up">
             <div class="tab-pane active show" id="tab-1">
@@ -145,9 +147,18 @@
                                     The bigger the range, the more variability the dataset is. However, range is simple and based on 2 numbers which makes it susceptible to outliers. It is also not a good idea 
                                     to use range to compare 2 dataset with different sample size. <br>
                                 </li>
-                                <li>Varaince which is the sqaured of standard deviation, is the average sqaured difference from mean. Unlike range, variance includes all value and compare to mean.
+                                <li>Variance which is the sqaured of standard deviation, is the average sqaured difference from mean. Unlike range, variance includes all value and compare to mean.
                                     To calculate this statistic, you calculate a set of squared differences between the data points and the mean, sum them, and then divide by the number of observations. 
                                     Hence, it’s the average squared difference. Moreover, the way you calculate the variance are different between population variance and sample variance.
+                                    For example, For example: Find the variance of the following dataset:
+                                    56,35,45,67,12,24,48,55,58,30, mean= 43 <br><br>
+                                    <math><mfrac>
+                                    <mi> (56-43)<sup>2</sup> +(35-43)<sup>2</sup>+(45-43)<sup>2</sup>+(67-43)<sup>2</sup>+
+                                        (12-43)<sup>2</sup>+(24-43)<sup>2</sup>+(48-43)<sup>2</sup>+(55-43)<sup>2</sup>+(58-43)<sup>2</sup>+(30-43)<sup>2</sup> </mi>
+                                    <mi> (10) </mi></mfrac>
+                                    </math>  <br>
+                                    Variance = 269.8 <br>
+                                    population standard deviation = <span>&#8730;</span> 269.8 = 16.4256
                                 </li>
                             </ul>
                         </p>
@@ -187,6 +198,8 @@
                         </p>
                     </div>
                 </div>
+                <a class="btn btn-primary" id="#btnPrevious">Previous</a>
+                <a class="btn btn-primary continue">Next</a>
             </div>  
             <div class="tab-pane" id="tab-3">
                 <div class="row">
@@ -217,7 +230,9 @@
                             </ol>
                         </p>
                     </div>
-                </div>          
+                </div>  
+                <a class="btn btn-primary back">Previous</a>
+                <a class="btn btn-primary continue">Next</a>        
             </div>  
             <div class="tab-pane" id="tab-4">
                 <div class="row"> 
@@ -372,11 +387,13 @@
                             </ul>
                         </p>
                     </div>
-                </div>    
-            </div>    
-        </div>            
-    </div>  
-</main>         
+                </div>  
+                <a class="btn btn-primary back">Previous</a>
+                <a class="btn btn-primary continue">Next</a>  
+            </div>   
+        </div>           
+    </div> 
+</main>    <!-- =======  end of section ======= -->      
 <hr>
 {% endblock %}        
 {% block footer %}
@@ -388,5 +405,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="../static/js/overall_main.js"></script>
 {% endblock %}
     

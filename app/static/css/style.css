@@ -5,7 +5,17 @@
 }
 
 /*--------------------------------------------------------------
-# carousel section
+# Introduction section for video
+--------------------------------------------------------------*/
+
+iframe.vid_center {
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+}
+
+/*--------------------------------------------------------------
+# carousel section for descriptive statistics
 --------------------------------------------------------------*/
 
 .carousel-inner img {
@@ -25,6 +35,20 @@
 }
 
 /*--------------------------------------------------------------
+# carousel section for inferential statistics
+--------------------------------------------------------------*/
+.carousel-inner .color {
+    color: black;
+}    
+
+
+p.move {
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+
+/*--------------------------------------------------------------
 # Subsection navigation
 --------------------------------------------------------------*/
 .container .nav {
@@ -41,6 +65,22 @@
     background-color: #5fcf80;
     color:black;
 }
+
+/*--------------------------------------------------------------
+# Subsection 
+--------------------------------------------------------------*/
+
+.tabs-wrap {
+	margin-top: 40px;
+}
+.tab-content .tab-pane {
+	padding: 20px 0;
+}
+
+.sticky-top {
+    background-color: #5fcf80;
+}
+
 
 /*--------------------------------------------------------------
 # login 
@@ -77,12 +117,123 @@
 }
 
 /*--------------------------------------------------------------
+# for hypothesis tab
+--------------------------------------------------------------*/
+
+.table {
+    
+    border:1px solid black;
+    margin-top: 30px;
+    padding-top: 30px;
+    margin-bottom: 50px;
+}    
+    
+
+
+.table,th,td{
+    width: 60%;
+    border: 1px solid black;
+    table-layout: fixed;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*--------------------------------------------------------------
 # for quiz
 --------------------------------------------------------------*/
 .questions {
     margin-top: 66px;
     padding: 30px 0;
 }
+
+img.image {
+    width: 398px;
+    height: 240px;
+}
+
+a.button {
+    background-color: #f44336;
+}
+
+.instruction {
+    border-left: 6px solid #00458b;
+    line-height: 1.2;
+    overflow: auto;
+    padding: 24px;
+    width: 90%;
+    margin-bottom: 40px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.instruction #quiz{
+    border-left: 6px solid #00458b;
+    line-height: 2;
+    overflow: auto;
+    padding: 24px;
+    width: 95%;
+    margin-bottom: 40px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-right: 30px;
+  }
+  
+  #quiz .answers {
+    margin-bottom: 10px;
+  }
+
+  .answers label{
+    margin-left : 10px;
+    font-size: 11pt;
+  }
+  
+  #quiz .question {
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  #submit{
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #297;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    float: right;
+  }  
+  
+  #submit:hover{
+      background-color: #3a8;
+  }
+  
+  #results {
+    margin-top: 20px;
+    font-size: 20pt;
+    color: #5fcf80;
+  }
+
+  #check {
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #297;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    
+    
+  }
+
+  #check:hover {
+    background-color: #3a8;
+  }
+  
+  
 
 /*--------------------------------------------------------------
 # for table score 
@@ -116,3 +267,4 @@ h1.user {
 .information {
     padding-left: 450px;
 }
+

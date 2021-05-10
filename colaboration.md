@@ -41,4 +41,8 @@ This table includes 2 parts, part that are finished and still working on
 | button return back to opening page | for login and signup | completed | 
 | work on quiz | interactive and different levels | still working |
 | create a table | for admin and user to see score | still working | 
-| 
+| link for HSS | connect to opening page | Completed |
+| get start | link to login | Completed | 
+| Next previous button | link to next tab | still working |
+| design the quiz | interface | done
+| design interactive quiz | for each level | still working | 

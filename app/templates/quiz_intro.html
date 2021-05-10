@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container questions">
+  <h2>Welcome {{name}}</h2>
+</div>
+<div class="container instruction">
+  <p>There are 3 levels in this quiz. Please follow the steps and instructions</p>
+  <p><b>INSTRUCTION</b> <br><br>
+    Description: This quiz is just to test your understanding on statistics <br><br>
+    Option: Recommended to start from level 1 <br><br>
+    Instruction:
+    <ul>
+      <li>This quiz is a multiple choice questions</li>
+      <li>You can choose only one answer</li>
+      <li>The quiz need to be done in one sitting</li>
+      <li>You need to have a stable internet connect to perform the quiz</li>
+    </ul>
+    Please click Start under each level to start the quiz, click Cancel to back to study.
+  </p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 d-flex justify-content-center">
+      <div class="card" style="width: 25rem;">
+        <img class="card-img-top" src="../static/images/beginner.gif" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Beginner Level</h5>
+          <p class="card-text">Please click Start to start and Cancel to go Back </p>
+          <a href="{{ url_for('beginner')}}" class="btn btn-primary button">Start</a>
+          <a href="{{ url_for('content')}}" class="btn btn-primary button">Cancel</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 d-flex justify-content-center">
+      <div class="card" style="width: 25rem;">
+        <img class="card-img-top" src="../static/images/intermediate.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Intermediate Level</h5>
+          <p class="card-text">Please click Start to start and Cancel to go Back</p>
+          <a href="{{ url_for('intermediate')}}" class="btn btn-primary button">Start</a>
+          <a href="{{ url_for('content')}}" class="btn btn-primary button">Cancel</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 d-flex justify-content-center">
+      <div class="card" style="width: 25rem;">
+        <img class="card-img-top image" src="../static/images/advanced.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Advance Level</h5>
+          <p class="card-text">Please click Start to start and Cancel to go Back</p>
+          <a href="{{ url_for('advance')}}" class="btn btn-primary button">Start</a>
+          <a href="{{ url_for('content')}}" class="btn btn-primary button">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+{% endblock %}
+
+{% block script %}
+{{ super() }}
+{% endblock %}

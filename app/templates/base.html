@@ -43,7 +43,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="#">HSS</a></h1>
+      <h1 class="logo me-auto"><a href="{{ url_for('index') }}">HSS</a></h1>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -51,24 +51,19 @@
           {% if current_user.is_authenticated %}
           <li class="dropdown"><a href="#"><span>Course</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li class="dropdown"><a href="{{ url_for('content')}}"><span>Content</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="{{ url_for('content', _anchor='tab-1')}}">Basic</a></li>
-                  <li><a href="{{ url_for('content', _anchor='tab-2')}}">Plots</a></li>
-                  <li><a href="{{ url_for('content', _anchor='tab-3')}}">Permutation</a></li>
-                  <li><a href="{{ url_for('content', _anchor='tab-4')}}">Probability</a></li>
-                </ul>
-              </li>
+              <li><a href="{{ url_for('introduction')}}">Introduction</a></li>
+              <li><a href="{{ url_for('content')}}">Descriptive Statistics</a></li>
+              <li><a href="{{ url_for('inferential')}}">Inferential Statistics</a></li>
             </ul>
           </li>
-          <li><a href="{{url_for ('asessment') }}">Assessment</a></li>
+          <li><a href="{{url_for ('quiz') }}">Assessment</a></li>
           <li><a href="{{ url_for('progress') }}">Progress</a></li>
           <li><a href="{{ url_for('result') }}">Result</a></li>
           <li><a href="{{ url_for('user') }}">Overall</a></li>
           {% endif %}
           {% if not current_user.is_authenticated %}
           <li><a href="{{ url_for('login') }}">login</a></li>
-          <li><a href="{{ url_for('signup') }}">Signup</a></li>
+          <li><a href="{{ url_for('register') }}">Signup</a></li>
           {% endif %}
           {% if current_user.is_authenticated %}
           <li><a href="{{ url_for('logout') }}">Logout</a></li>

@@ -133,3 +133,5 @@ const plot = new Chart(bar, {
     }
   }
 });
+
+

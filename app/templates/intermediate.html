@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container questions">
+  <h2>Welcome {{name}}</h2>
+</div>
+<div class="container instruction">
+  <p><b>INSTRUCTION</b> <br><br>
+    Description: This quiz is just to test your understanding on statistics <br><br>
+    Information: This is a quiz for Intermediate level <br><br>
+    Instruction:
+    <ul>
+      <li>This quiz is a multiple choice questions</li>
+      <li>You can choose only one answer</li>
+      <li>The quiz need to be done in one sitting</li>
+      <li>You need to have a stable internet connect to perform the quiz</li>
+    </ul>
+  </p>
+</div>
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+{% endblock %}
+
+{% block script %}
+{{ super() }}
+{% endblock %}
+
