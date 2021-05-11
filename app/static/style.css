@@ -14,7 +14,7 @@
 
 /* login background */
 .bk {
-    background-image: url("../images/loginbk.jpg");
+    background-image: url("images/loginbk.jpg");
     background-size:cover;
     background-position:bottom;
     background-attachment: fixed;

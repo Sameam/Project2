@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ title }}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body class="bk">
+        <!-- Header -->
+
+        <!-- login interface -->
+        <div class="layout">
+            <div class="row">
+                <div class="col-sm-7">
+                    
+                </div>
+                <div class="col-sm-4">
+                    <div class="login-container">
+                        <div class="container-fluid bg-warning opacity">
+                            <h2>Welcome</h2><hr>
+                            <p>Sweat in exchange for harvest， study to obtain the knowledge.</p><br>
+                            {% block content %}
+                                <form action="" method="post" novalidate>
+                                    {{ form.hidden_tag() }}
+                                    <div class="form-group">
+                                        <label for="usr">{{ form.name.label }}</label>
+                                        <p>{{ form.name(size=32) }}</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">{{ form.password.label }}</label>
+                                        <p>{{ form.password(size=32) }}</p>
+                                        {% for msg in get_flashed_messages(): %}
+                                        <span style="color: red;">{{msg}}</span>
+                                        {% endfor %}   
+                                    </div>
+                                    <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+                                    <p>{{ form.submit() }}</p>
+                                    <p class="note pull-right"><a href="{{ url_for('register')}}">register</a></p><br><br>
+                                </form>
+                            {% endblock %}
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
