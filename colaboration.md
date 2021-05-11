@@ -45,4 +45,4 @@ This table includes 2 parts, part that are finished and still working on
 | get start | link to login | Completed | 
 | Next previous button | link to next tab | still working |
 | design the quiz | interface | done
-| design interactive quiz | for each level | still working | 
+| design interactive quiz | for each level | still need to work on advance level | 

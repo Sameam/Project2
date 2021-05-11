@@ -1,8 +1,6 @@
-// for beginner.html
 var quiz = document.getElementById('quiz');
 var results = document.getElementById('results');
 var submit = document.getElementById('check');
-
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
@@ -84,111 +82,108 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 	}
 }
 
-var myQuestions = [
+var intermediateQuestions = [
 	{
-		question: "1. How to find central tendancy in the dataset?",
+		question: "1. Scenario: The probabilities of three teams A, B and C winning a badminton competition are 1/3, 1/5 and 1/9 respectively. Find the probability either A or B or C will win",
 		answers: {
-			a: 'Mean Median Mode',
-			b: 'Mean',
-      c: 'Standard deviation',
-      d: 'Variance'
-		},
-		correctAnswer: 'a'
-	},
-	{
-		question: "2. Find the mean and median of the following dataset: Dataset = 25,89,90,5,34,32,67,89,90",
-		answers: {
-			a: 'Mean=54.89 Median=33 ',
-			b: 'Mean=34 Median=34',
-      c: 'Mean=57.89 Median=67',
-      d: 'Mean=5 Median=67'
+			a: '<math><mfrac><mi> 1 </mi><mi> 3 </mi></mfrac></math>',
+			b: '<math><mfrac><mi> 1 </mi><mi> 5 </mi></mfrac></math>',
+      c: '<math><mfrac><mi> 29 </mi><mi> 45 </mi></mfrac></math>',
+      d: '<math><mfrac><mi> 7 </mi><mi> 15 </mi></mfrac></math>'
 		},
 		correctAnswer: 'c'
   },
   {
-		question: "3. What is normal distribution look like?",
+		question: "2. We are 95% confidence that average score for web development class is between [50,80]. What is the Confidence Interval=(CI)?",
 		answers: {
-			a: 'Bell shaped and Symmetrics ',
-			b: 'Right Skewed',
-      c: 'Left Skewed',
-      d: 'Bell shaped and Asymmetrics'
+			a: '95% CI = 80',
+			b: '95% CI = 50',
+      c: '95% CI = [50,80]',
+      d: '95% CI = 30'
+		},
+		correctAnswer: 'c'
+  },
+  {
+		question: "3. Graph use for check correlation",
+		answers: {
+			a: 'Scatterplot',
+			b: 'Density Plot',
+      c: 'Barplot',
+      d: 'Histogram'
 		},
 		correctAnswer: 'a'
   },
-  {
-    question: "4. What is histogram used for?",
+	{
+		question: "4.  Set that is selected from a subset without replacement without considered the order",
 		answers: {
-			a: 'Outliers',
-			b: 'Distribution',
-      c: 'Dataset unbalance',
-      d: 'Average'
+			a: 'Permutation',
+			b: 'Combination',
+      c: 'Point estimate',
+      d: 'Interval'
 		},
 		correctAnswer: 'b'
   },
   {
-    question: "5. What type of dataset is suitable with bar graph?",
+		question: "5.  Set that is selected from a subset without replacement and considered the order",
 		answers: {
-			a: 'Categorical',
-			b: 'Quantitative',
-      c: 'Unbalance Dataset',
-      d: 'Interval dataset'
+			a: 'Permutation',
+			b: 'Combination',
+      c: 'Point estimate',
+      d: 'Interval'
 		},
 		correctAnswer: 'a'
   },
   {
-    question: "6. Scenario: In your wallet, you have 5 10$ cash and 10 20$ cash? You want to find the probability whether when you take out the money is a 10$ or 20$ paper? What is this kind of probability event?",
+		question: "6. How many ways can the first 3 places be awarded in a race involving  5 contestants?",
 		answers: {
-			a: 'Independence Event',
-			b: 'Dependence Event',
-      c: 'Inclusive Event',
-      d: 'Mutually Exclusive Event'
+			a: '125',
+			b: '60',
+      c: '5',
+      d: '3'
 		},
-		correctAnswer: 'd'
+		correctAnswer: 'b'
   },
   {
-    question: "7. When the outcome of the first event affect the second event, it is called: ",
+		question: "7. 3 elements a,b,c, how many permutation can make without repetition?",
 		answers: {
-			a: 'Independence Event',
-			b: 'Dependence Event',
-      c: 'Inclusive Event',
-      d: 'Mutually Exclusive Event'
+			a: '12',
+			b: '6',
+      c: '9',
+      d: '3'
 		},
-    correctAnswer: 'b'
+		correctAnswer: 'b'
   },
   {
-    question: "8. Technique that allow us to use statistics such as mean or sample standard deviation to make generalization about population is called: ",
+		question: "8. 3 elements a,b,c, how many permutation can make with repetition?",
 		answers: {
-			a: 'Confidence Interval',
-			b: 'Statistical test',
-      c: 'Inferential Statistics',
-      d: 'Descriptive Statistics'
+			a: '12',
+			b: '6',
+      c: '9',
+      d: '3'
 		},
-    correctAnswer: 'c'
+    correctAnswer: 'a'
   },
   {
-    question: "9. Find the sample variance (var) and sample standard deviation (std) of the following dataset: Dataset = 25,89,90,5,34,32,67,89,90",
+		question: "9. What is ratio between the number of wanted outcome compare to the number of all possible outcome?",
 		answers: {
-			a: 'Var = 1022.32, Std= 31.974',
-			b: 'Var = 1150.11, Std= 33.913',
-      c: 'Var = 1800, St= 42.426',
-      d: 'Not enough information'
+			a: 'Statistics',
+			b: 'ANOVA',
+      c: 'Statistical test',
+      d: 'Probability'
 		},
-    correctAnswer: 'b'
+    correctAnswer: 'a'
   },
   {
-    question: "10. What is a single value estimate of parameter?",
+		question: "9. what is probabilities of getting head when you toss a coin?",
 		answers: {
-			a: 'Confidence Interval',
-			b: 'Sample error',
-      c: 'Point estimate',
-      d: 'All of the above'
+			a: '<math><mfrac><mi> 1 </mi><mi> 2 </mi></mfrac></math>',
+			b: '1',
+      c: '<math><mfrac><mi> 1 </mi><mi> 3 </mi></mfrac></math>',
+      d: '<math><mfrac><mi> 1 </mi><mi> 5 </mi></mfrac></math>'
 		},
-    correctAnswer: 'c'
+    correctAnswer: 'a'
   },
 ];
 
 
-
-generateQuiz(myQuestions, quiz, results, submit);
-
-
+generateQuiz(intermediateQuestions, quiz, results, submit);

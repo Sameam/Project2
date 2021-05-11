@@ -17,10 +17,20 @@
       <li>This quiz is a multiple choice questions</li>
       <li>You can choose only one answer</li>
       <li>The quiz need to be done in one sitting</li>
+      <li>Do not leave the quiz, or your result will not be save</li>
       <li>You need to have a stable internet connect to perform the quiz</li>
+      <li>You can redo the quiz multiple times</li>
+      <li>You can check your answer before submit to see your result</li>
     </ul>
   </p>
 </div>
+<div class="container instruction">
+  <h2>Quiz</h2>
+  <div id="quiz"></div>
+  <button id="check">Check Answer</button>
+  <a href="{{ url_for('quiz')}}"><button id="submit">Submit</button></a>
+  <div id="results"></div>
+</div>  
 {% endblock %}
 
 {% block footer %}
@@ -29,5 +39,6 @@
 
 {% block script %}
 {{ super() }}
+<script src="../static/js/intermediate.js"></script>
 {% endblock %}
 

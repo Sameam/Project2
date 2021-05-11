@@ -62,7 +62,7 @@ p.move {
 .container .navigation {
     border: 1px solid black;
     padding: 10px;
-    background-color: #5fcf80;
+    background-color:gray;
     color:black;
 }
 
@@ -78,7 +78,7 @@ p.move {
 }
 
 .sticky-top {
-    background-color: #5fcf80;
+    background-color: gray
 }
 
 
@@ -178,23 +178,27 @@ a.button {
     border-right: 1px solid black;
     border-bottom: 1px solid black;
     margin-right: 30px;
-  }
+}
   
-  #quiz .answers {
-    margin-bottom: 10px;
-  }
 
-  .answers label{
+#quiz .answers {
+    margin-bottom: 10px;
+}
+
+
+.answers label{
     margin-left : 10px;
     font-size: 11pt;
-  }
+}
+
   
-  #quiz .question {
+#quiz .question {
     font-weight: 600;
     margin-bottom: 20px;
-  }
+}
+
   
-  #submit{
+a#submit{
     font-family: sans-serif;
     font-size: 20px;
     background-color: #297;
@@ -204,19 +208,22 @@ a.button {
     padding: 20px;
     cursor: pointer;
     float: right;
-  }  
+}  
+
   
-  #submit:hover{
-      background-color: #3a8;
-  }
+a#submit:hover{
+    background-color: #3a8;
+}
+
   
-  #results {
+#results {
     margin-top: 20px;
     font-size: 20pt;
     color: #5fcf80;
-  }
+}
 
-  #check {
+
+#check {
     font-family: sans-serif;
     font-size: 20px;
     background-color: #297;
@@ -225,13 +232,12 @@ a.button {
     border-radius: 3px;
     padding: 20px;
     cursor: pointer;
-    
-    
-  }
+}
 
-  #check:hover {
+
+#check:hover {
     background-color: #3a8;
-  }
+}
   
   
 

@@ -21,6 +21,13 @@
     </ul>
   </p>
 </div>
+<div class="container instruction">
+  <h2>Quiz</h2>
+  <div id="quiz"></div>
+  <button id="check">Check Answer</button>
+  <a href="{{ url_for('quiz')}}"><button id="submit">Submit</button></a>
+  <div id="results"></div>
+</div>  
 {% endblock %}
 
 {% block footer %}
@@ -29,4 +36,5 @@
 
 {% block script %}
 {{ super() }}
+<script src="../static/js/advance.js"></script>
 {% endblock %}
