@@ -10,6 +10,7 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(128))
     email = db.Column(db.String(128), index=True, unique=True)
     phone = db.Column(db.Integer, unique=True)
+    admin = db.Column(db.Boolean, default=False)
 
     posts = db.relationship('Post',backref = 'author', lazy = 'dynamic')
 
@@ -22,17 +23,21 @@ class User(db.Model, UserMixin):
     def check_password(self, password):
         return check_password_hash(self.password, password)
 
-@login.user_loader
-def load_user(id):
-    return User.query.get(int(id))
-
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     body = db.Column(db.String(256))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    score_1 = db.Column(db.Integer)
+    score_2 = db.Column(db.Integer)
+    score_3 = db.Column(db.Integer)
+    feedback = db.Column(db.String(128))
+
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
 
+@login.user_loader
+def load_user(id):
+    return User.query.get(int(id))

@@ -103,4 +103,4 @@ def intermediate():
 @app.route("/advance")
 @login_required
 def advance():
-    return render_template("advance.html", title="Advance", name=current_user.name)   
+    return render_template("advance.html", title="Advance", name=current_user.name)  

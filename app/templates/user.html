@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block header %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1 class="user">Welcome {{name}}</h1>
+</div>
+<section id="trainers" class="trainers">
+  <div class="container user" data-aos="fade-up">
+
+    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="member">
+          <img src="../static/images/frame.png" class="img-fluid" alt="frame">
+          <div class="member-content">
+            <h4> {{ name }}</h4>
+            <span>Student</span>
+            <p>
+               Hello {{name}} to study statistics from HSS. Your id is {{id}}. <br>
+               Enjoy your study with statistics
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="member">
+          <img src="#" class="img-fluid" alt="">
+          <div class="member-content">
+            <h4> Current Progress with course </h4>
+            <p>
+              Currently, at quiz level 1. 
+              <a href="{{ url_for('asessment')}}"><button type="button" class="btn btn-primary">Continue to quiz</button></a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="member">
+          <img src="#" class="img-fluid" alt="">
+          <div class="member-content">
+            <h4>  </h4>
+            <p>
+             <ul>
+               <li>Please continue your quiz study and quiz to further your study</li>
+               <li>Feel free to contact us if you have any questions regarding the study or feedback</li>
+             </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Trainers Section -->
+
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+{% endblock %}
+
+{% block script %}
+{{ super() }}
+{% endblock %}
