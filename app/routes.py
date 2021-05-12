@@ -9,7 +9,7 @@ from werkzeug.urls import url_parse
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("base.html", title="Home")
+    return render_template("opening.html", title="Home")
 
 @app.route("/content")
 def content():
@@ -53,4 +53,49 @@ def register():
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+@app.route("/asessment")
+@login_required
+def asessment():
+    return render_template("asessment.html", title="Quiz")
+
+@app.route("/progress")
+@login_required
+def progress():
+    return render_template("progress.html", title="Progress",user=current_user.name)
+
+@app.route("/result")
+@login_required
+def result():
+    return render_template("result.html", title="Result",name= current_user.name, id= current_user.id)
+
+@app.route("/user")
+@login_required 
+def user():
+    return render_template("user.html", title="User", name=current_user.name, id=current_user.id)
+
+@app.route("/introduction")
+@login_required
+def introduction():
+    return render_template("introduction.html", title="Introduction",name=current_user.name)
+
+@app.route("/quiz")
+@login_required
+def quiz():
+    return render_template("quiz_intro.html", title="Quiz", name=current_user.name)
+
+@app.route("/beginner")
+@login_required
+def beginner():
+    return render_template("beginner.html", title="Beginner", name=current_user.name)
+
+@app.route("/intermediate")
+@login_required
+def intermediate():
+    return render_template("intermediate.html", title="Intermediate", name= current_user.name)
+
+@app.route("/advance")
+@login_required
+def advance():
+    return render_template("advance.html", title="Advance", name=current_user.name)  
 

@@ -1,70 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        {% block head %}
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <!--Bootstrap-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!--CSS-->
-        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"/>
-        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="static/main.js"></script>
-        {% endblock %}
-    </head>
-    <body>
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand logo" href="#">HSS</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                        <a class="nav-link" href="{{ url_for('index')}}">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Content
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ url_for('content')}}">Content</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Assessment</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Result</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Feedback</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Overall</a>
-                        </li>
-                  </ul>
-                </div>
-                
-                {% if current_user.is_anonymous %}
-                    <a class="nav-link" href="{{ url_for('login')}}">login</a>
-                    <a class="nav-link" href="{{ url_for('register')}}">Sign up</a>
-                {% else %}
-                    <p class="nav-link">welcome , {{ current_user.name }}</p>
-                    <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>  
-                {% endif %}
-            </nav>
+
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>{{ title }}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  
+  
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'/>
+  <!-- Vendor CSS Files -->
+  <link href="../static/animate/bootstrap_animate/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../static/animate/bootstrap_animate/aos/aos.css" rel="stylesheet">
+  <link href="../static/animate/bootstrap_animate/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/animate/bootstrap_animate/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/animate/bootstrap_animate/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/animate/bootstrap_animate/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../static/animate/bootstrap_animate/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/css/main_style.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/style.css" type='text/css'/>
+
+
+  {% endblock %}
+</head>
+
+<body>
+  
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="#">HSS</a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="{{ url_for('index')}}">Home</a></li>
+          {% if current_user.is_authenticated %}
+          <li class="dropdown"><a href="#"><span>Course</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="{{ url_for('content')}}"><span>Content</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{{ url_for('content', _anchor='tab-1')}}">Basic</a></li>
+                  <li><a href="{{ url_for('content', _anchor='tab-2')}}">Plots</a></li>
+                  <li><a href="{{ url_for('content', _anchor='tab-3')}}">Permutation</a></li>
+                  <li><a href="{{ url_for('content', _anchor='tab-4')}}">Probability</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="{{url_for ('asessment') }}">Assessment</a></li>
+          <li><a href="{{ url_for('progress') }}">Progress</a></li>
+          <li><a href="{{ url_for('result') }}">Result</a></li>
+          <li><a href="{{ url_for('user') }}">Overall</a></li>
+          {% endif %}
+          {% if not current_user.is_authenticated %}
+          <li><a href="{{ url_for('login') }}">login</a></li>
+          <li><a href="{{ url_for('register') }}">register</a></li>
+          {% endif %}
+          {% if current_user.is_authenticated %}
+          <li><a href="{{ url_for('logout') }}">Logout</a></li>
+          {% endif %}
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  {% block content %}
+  {% endblock %}
+
+  <!-- ======= Footer ======= -->
+  {% block footer %}
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>HSS</h3>
+            <p>
+              <strong>Phone:</strong> +61 490832804<br>
+              <strong>Email:</strong> 22805226@student.uwa.edu.au<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          
+
         </div>
-        {% block content %} {% endblock %}
-        <footer class="container">
-            <p>Contact Us</p>
-        </footer>
-    </body>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>HSS</span></strong>. All Rights Reserved
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="#" class="wechat"><i class="fa fa-weixin fa_5x"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  {% endblock %}
+
+  {% block script %}
+  <!-- Vendor JS Files -->
+  <script src="../static/animate/bootstrap_animate/aos/aos.js"></script>
+  <script src="../static/animate/bootstrap_animate/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/animate/bootstrap_animate/purecounter/purecounter.js"></script>
+  <script src="../static/animate/bootstrap_animate/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+  <script src="../static/js/main.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/overall_main.js"></script>
+  {% endblock %}
+</body>
+
 </html>
