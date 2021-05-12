@@ -5,15 +5,19 @@ from app.forms import LoginForm, RegistrationForm
 from app.models import User
 from werkzeug.urls import url_parse
 
-
 @app.route("/")
-@app.route("/index")
 def index():
-    return render_template("opening.html", title="Home")
+    return render_template("opening.html",title="Home")
 
 @app.route("/content")
+@login_required
 def content():
-    return render_template("content.html", title="Content")
+    return render_template("content.html", title="Descriptive Statistics")
+
+@app.route("/inferential")
+@login_required
+def inferential():
+    return render_template("inference.html", title="Inference Statistics")
 
 @app.route("/login", methods=['GET','POST'])
 def login():
@@ -31,9 +35,10 @@ def login():
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
-            next_page = url_for('index')
+            next_page = url_for('introduction')
         return redirect(next_page)
     return render_template("login.html", title="Login", form = form)
+
 
 @app.route("/register",methods=['GET','POST'])
 def register():
@@ -49,10 +54,11 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form = form)
 
-@app.route('/logout')
+@app.route("/logout")
+@login_required
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return redirect(url_for("index"))
 
 @app.route("/asessment")
 @login_required
@@ -97,5 +103,4 @@ def intermediate():
 @app.route("/advance")
 @login_required
 def advance():
-    return render_template("advance.html", title="Advance", name=current_user.name)  
-
+    return render_template("advance.html", title="Advance", name=current_user.name)   
