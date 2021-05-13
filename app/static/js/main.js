@@ -1,3 +1,57 @@
+function mean() {
+  document.getElementById("mean").innerHTML = 43;
+  document.getElementById("median_odd").innerHTML = 45;
+  document.getElementById("median_even").innerHTML = 46.5;
+}
+
+function median_odd() {
+  document.getElementById("median_odd").innerHTML = 45;
+}
+
+function median_even() {
+  document.getElementById("median_even").innerHTML = 46.5;
+}
+
+function mode() {
+  document.getElementById("mode").innerHTML = 2;
+}
+
+function range() {
+  document.getElementById("range").innerHTML = 18;
+}
+
+function variance() {
+  document.getElementById('variance').innerHTML = 269.8;
+}
+
+function std() {
+  document.getElementById('std').innerHTML = 16.4256;
+}
+
+function prob() {
+  document.getElementById('prob').innerHTML = "<math><mfrac><mi> 1 </mi><mi> 2 </mi></mfrac></math>";
+}
+
+function three() {
+  document.getElementById("three").innerHTML = "<math><mfrac><mi> 1 </mi><mi> 6 </mi></mfrac></math>";
+}
+
+function red() {
+  document.getElementById("red").innerHTML = "<math><mfrac><mi> 20 </mi><mi> 210 </mi></mfrac></math>";
+}
+
+function mutual() {
+  document.getElementById("mutual").innerHTML = "<math><mfrac><mi> 1 </mi><mi> 6 </mi></mfrac></math>";
+}
+
+function inclusive() {
+  document.getElementById('inclusive').innerHTML = "<math><mfrac><mi> 7 </mi><mi> 13 </mi></mfrac></math>";
+}
+
+function sample() {
+  document.getElementById('sample').innerHTML = 17.31;
+}
+
 // drawing a histogram
 const ctx = document.getElementById('histogram').getContext('2d');
 const chart = new Chart(ctx, {
