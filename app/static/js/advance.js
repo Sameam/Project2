@@ -1,6 +1,6 @@
 var quiz = document.getElementById('quiz');
 var results = document.getElementById('results');
-var submit = document.getElementById('check');
+var submit = document.getElementById('submit');
 
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
@@ -60,14 +60,8 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
         // add to the number of correct answers
         numCorrect++;
         
-        // color the answers green
-        answerContainers[i].style.color = 'lightgreen';
       }
-      // if answer is wrong or blank
-      else{
-        // color the answers red
-        answerContainers[i].style.color = 'red';
-      }
+
     }
 
     // show number of correct answers out of total
@@ -85,101 +79,101 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
 var myQuestions = [
 	{
-		question: "1. How to find central tendancy in the dataset?",
+		question: "1. 2 main types of statistical tests ",
 		answers: {
-			a: 'Mean Median Mode',
-			b: 'Mean',
-      c: 'Standard deviation',
-      d: 'Variance'
+			a: 't_test, ANOVA',
+			b: 'Parametric, Non_parametric',
+      c: 'p-value, significant level',
+      d: 't_test, p_value'
 		},
-		correctAnswer: 'a'
+		correctAnswer: 'b'
 	},
 	{
-		question: "2. Find the mean and median of the following dataset: Dataset = 25,89,90,5,34,32,67,89,90",
+		question: "2. How many steps in hypothesis testing?",
 		answers: {
-			a: 'Mean=54.89 Median=33 ',
-			b: 'Mean=34 Median=34',
-      c: 'Mean=57.89 Median=67',
-      d: 'Mean=5 Median=67'
+			a: '2',
+			b: '3',
+      c: '4',
+      d: '5'
+		},
+		correctAnswer: 'd'
+  },
+  {
+		question: "3. How many types of regression testing? ",
+		answers: {
+			a: '1',
+			b: '2',
+      c: '3',
+      d: '4'
 		},
 		correctAnswer: 'c'
   },
   {
-		question: "3. What is normal distribution look like?",
+    question: "4. What do we compare to p-value to make conclusion?",
 		answers: {
-			a: 'Bell shaped and Symmetrics ',
-			b: 'Right Skewed',
-      c: 'Left Skewed',
-      d: 'Bell shaped and Asymmetrics'
+			a: 't-critical',
+			b: 'hypothesis',
+      c: 'signicant level',
+      d: 'null hypothesis'
 		},
-		correctAnswer: 'a'
+		correctAnswer: 'c'
   },
   {
-    question: "4. What is histogram used for?",
+    question: "5. Assumption of regression",
 		answers: {
-			a: 'Outliers',
-			b: 'Distribution',
-      c: 'Dataset unbalance',
-      d: 'Average'
-		},
-		correctAnswer: 'b'
-  },
-  {
-    question: "5. What type of dataset is suitable with bar graph?",
-		answers: {
-			a: 'Categorical',
-			b: 'Quantitative',
+			a: 'Linear',
+			b: 'qualitative data',
       c: 'Unbalance Dataset',
       d: 'Interval dataset'
 		},
 		correctAnswer: 'a'
   },
   {
-    question: "6. Scenario: In your wallet, you have 5 10$ cash and 10 20$ cash? You want to find the probability whether when you take out the money is a 10$ or 20$ paper? What is this kind of probability event?",
+    question: "6. One condition that must satisfy on multiple linear regression is:",
 		answers: {
-			a: 'Independence Event',
-			b: 'Dependence Event',
-      c: 'Inclusive Event',
-      d: 'Mutually Exclusive Event'
+			a: 'Collinearity',
+			b: 'Non_collinearity',
+      c: 'More than 2 variables',
+      d: 'Not correlated'
 		},
-		correctAnswer: 'd'
+		correctAnswer: 'b'
   },
   {
-    question: "7. When the outcome of the first event affect the second event, it is called: ",
+    question: "7. Another name for dependent variable, ",
 		answers: {
-			a: 'Independence Event',
-			b: 'Dependence Event',
-      c: 'Inclusive Event',
-      d: 'Mutually Exclusive Event'
-		},
-    correctAnswer: 'b'
-  },
-  {
-    question: "8. Technique that allow us to use statistics such as mean or sample standard deviation to make generalization about population is called: ",
-		answers: {
-			a: 'Confidence Interval',
-			b: 'Statistical test',
-      c: 'Inferential Statistics',
-      d: 'Descriptive Statistics'
-		},
-    correctAnswer: 'c'
-  },
-  {
-    question: "9. Find the sample variance (var) and sample standard deviation (std) of the following dataset: Dataset = 25,89,90,5,34,32,67,89,90",
-		answers: {
-			a: 'Var = 1022.32, Std= 31.974',
-			b: 'Var = 1150.11, Std= 33.913',
-      c: 'Var = 1800, St= 42.426',
-      d: 'Not enough information'
+			a: 'Predictor',
+			b: 'Predicted',
+      c: 'Mean',
+      d: 'Beta'
 		},
     correctAnswer: 'b'
   },
   {
-    question: "10. What is a single value estimate of parameter?",
+    question: "8. Another name for independent variable, ",
 		answers: {
-			a: 'Confidence Interval',
-			b: 'Sample error',
-      c: 'Point estimate',
+			a: 'Predictor',
+			b: 'Predicted',
+      c: 'Mean',
+      d: 'Beta'
+		},
+    correctAnswer: 'a'
+  },
+  {
+    question: "9. What is regression used for?",
+		answers: {
+			a: 'Make prediction',
+			b: 'Test hypothesis',
+      c: 'Test research question',
+      d: 'Calculate the past dataset'
+		},
+    correctAnswer: 'a'
+  },
+  {
+    question: "10. Scenario: You want to tes a group of sport students the different between before they taking protein and training and after taking protein and training. What is the suitable statistical test?",
+		answers: {
+			a: '1 t_test',
+			b: '2 t-test',
+      c: 'Paired t-test',
       d: 'All of the above'
 		},
     correctAnswer: 'c'

@@ -224,22 +224,6 @@ a #submit:hover{
     color: #5fcf80;
 }
 
-
-#check {
-    font-family: sans-serif;
-    font-size: 20px;
-    background-color: #297;
-    color: #fff;
-    border: 0px;
-    border-radius: 3px;
-    padding: 20px;
-    cursor: pointer;
-}
-
-
-#check:hover {
-    background-color: #3a8;
-}
   
   
 

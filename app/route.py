@@ -60,11 +60,6 @@ def logout():
     logout_user()
     return redirect(url_for("index"))
 
-@app.route("/asessment")
-@login_required
-def asessment():
-    return render_template("asessment.html", title="Quiz")
-
 @app.route("/progress")
 @login_required
 def progress():

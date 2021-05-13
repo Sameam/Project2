@@ -1,6 +1,6 @@
 var quiz = document.getElementById('quiz');
 var results = document.getElementById('results');
-var submit = document.getElementById('check');
+var submit = document.getElementById('submit');
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 

@@ -1,42 +1,47 @@
-from datetime import datetime
-from app import db 
+from app import db
 from app import login
+from datetime import datetime
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
-
 class Users(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), index=True)
-    email = db.Column(db.String(100), index=True, nullable=False)
-    password = db.Column(db.String(100), nullable=False)
+    name = db.Column(db.String(64), index=True)
+    password = db.Column(db.String(128))
+    email = db.Column(db.String(128), index=True, unique=True)
     phone = db.Column(db.Integer, unique=True)
-    
+    admin = db.Column(db.Boolean, default=False)
+
+    posts = db.relationship('Post',backref = 'author', lazy = 'dynamic')
+
     def __repr__(self):
-        return "<User {}>".format(self.name)
+        return '<User {}>'.format(self.name) 
     
-    def _init_(self, id,name):
-        self.id = id
-        self.name = name
-        
     def set_password(self, password):
         self.password = generate_password_hash(password)
 
     def check_password(self, password):
         return check_password_hash(self.password, password)
-    
+
+
+class Post(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    body = db.Column(db.String(256))
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    score_1 = db.Column(db.Integer)
+    score_2 = db.Column(db.Integer)
+    score_3 = db.Column(db.Integer)
+    feedback = db.Column(db.String(128))
+
+
+    def __repr__(self):
+        return '<Post {}>'.format(self.body)
+
 @login.user_loader
 def load_user(id):
     return Users.query.get(int(id))
-
         
-    # @property
-    # def get_date(self):
-    #     return str(self.time.date())
-
-    # @property
-    # def get_time(self):
-    #     return str(self.time())
 
         
     
