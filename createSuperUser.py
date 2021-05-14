@@ -1,7 +1,7 @@
 from app.models import User
 from app import db
 
-print("Warning: This code is use for create HSS admin")
+print(" Warning: This code is use for create HSS admin")
 print('')
 print("If you are normal user,please turn off this python code. Thank you")
 print('')

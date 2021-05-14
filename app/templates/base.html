@@ -10,7 +10,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  
+  {{moment.include_jquery()}}
+  {{moment.include_moment()}}
   
   <!--bootstrap-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -54,8 +55,10 @@
               <li><a href="{{ url_for('inferential')}}">Inferential Statistics</a></li>
             </ul>
           </li>
+            {% if current_user.admin != True %}
           <li><a href="{{url_for ('quiz') }}">Assessment</a></li>
           <li><a href="{{ url_for('progress') }}">Progress</a></li>
+            {% endif %}
           <li><a href="{{ url_for('result') }}">Result</a></li>
           <li><a href="{{ url_for('user') }}">Overall</a></li>
           {% endif %}
@@ -144,6 +147,7 @@
 
   <!-- Template Main JS File -->
   <script src="../static/js/overall_main.js"></script>
+  <script src="../static/js/moment.js"></script>
   {% endblock %}
 </body>
 

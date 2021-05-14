@@ -4,6 +4,7 @@ from flask_login import current_user, login_user, login_required, logout_user
 from app.forms import LoginForm, RegistrationForm
 from app.models import User
 from werkzeug.urls import url_parse
+from datetime import datetime
 
 @app.route("/")
 def index():
@@ -73,7 +74,11 @@ def progress():
 @app.route("/result")
 @login_required
 def result():
-    return render_template("result.html", title="Result",name= current_user.name, id= current_user.id)
+    current_time=datetime.utcnow()
+    if current_user.admin == True:
+        users = User.query.filter(User.admin != True).all()
+        return render_template("result.html", title="Result",name= current_user.name, id= current_user.id, current_time=current_time,users = users)
+    return render_template("result.html", title="Result",name= current_user.name, id= current_user.id, current_time=current_time)
 
 @app.route("/user")
 @login_required 

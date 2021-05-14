@@ -15,19 +15,47 @@
                 <th scope="col">Name</th>
                 <th scope="col">Date</th>
                 <th scope="col">Time</th>
-                <th scope="col">Score</th>
-                <th scope="col">View Details</th>
+                <th scope="col">Score1</th>
+                <th scope="col">Score2</th>
+                <th scope="col">Score3</th>
+                <th scope="col">feedback</th>
+                {% if current_user.admin == True %}
+                <th scope="col">Modify</th>
+                <th scope="col">Delect</th>
+                {% endif %}
+
               </tr>
             </thead>
             <tbody>
+              {% if current_user.admin != True %}
               <tr>
                 <th scope="row">{{ id }}</th>
                 <td>{{ name }}</td>
-                <td>Date</td>
-                <td>Time</td>
-                <td>5</td>
-                <td><button type="button" class="btn btn-info"><i class="fa fa-bars"></i> Details</i></button></td>
+                <td>{{moment(current_time).format('L')}}</td>
+                <td>{{moment(current_time).fromNow()}}</td>
+                <td>{{ current_user.score_1 }}</td>
+                <td>{{ current_user.score_2 }}</td>
+                <td>{{ current_user.score_3 }}</td>
+                <td>{{ current_user.feedback }}</td>
+                
               </tr>
+              {% endif %}
+              {% if current_user.admin == True %}
+              {% for i in users %}
+              <tr>
+                <th scope="row">{{ i.id }}</th>
+                <td>{{ i.name }}</td>
+                <td>{{moment(current_time).format('L')}}</td>
+                <td>{{moment(current_time).fromNow()}}</td>
+                <td>{{ i.score_1 }}</td>
+                <td>{{ i.score_2 }}</td>
+                <td>{{ i.score_3 }}</td>
+                <td>{{ i.feedback }}</td>
+                <td><button type="button" class="btn btn-info" onclick="">Modify</button></td>
+                <td><button type="button" class="btn btn-info" onclick="">Delect</button></td>
+              </tr>
+              {% endfor %}
+              {% endif %}
             </tbody>
           </table>
     </div>
