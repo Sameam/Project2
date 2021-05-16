@@ -5,6 +5,7 @@ from app.forms import LoginForm, RegistrationForm
 from app.models import User
 from werkzeug.urls import url_parse
 from datetime import datetime
+import json
 
 @app.route("/")
 def index():
@@ -109,3 +110,45 @@ def intermediate():
 @login_required
 def advance():
     return render_template("advance.html", title="Advance", name=current_user.name)  
+
+@app.route('/delete/<user_id>')
+@login_required
+def delete(user_id):
+    user = User.query.filter(User.id == user_id).first()
+    db.session.delete(user)
+    db.session.commit()
+    return redirect(url_for('result'))
+
+@app.route('/score1',methods = ['GET','POST'])
+@login_required
+def score1():
+    requestArgs = request.values  
+    score1 = requestArgs.get("score")
+    user = current_user
+    user.score_1 = score1
+    user.timestamp = datetime.utcnow()
+    db.session.commit()
+    return render_template("quiz_intro.html", title="Quiz", name=current_user.name)
+
+@app.route('/score2',methods = ['GET','POST'])
+@login_required
+def score2():
+    requestArgs = request.values  
+    score2 = requestArgs.get("score")
+    user = current_user
+    user.score_2 = score2
+    user.timestamp = datetime.utcnow()
+    db.session.commit()
+    return render_template("quiz_intro.html", title="Quiz", name=current_user.name)
+
+@app.route('/score3',methods = ['GET','POST'])
+@login_required
+def score3():
+    requestArgs = request.values  
+    score3 = requestArgs.get("score")
+    user = current_user
+    user.score_3 = score3
+    user.timestamp = datetime.utcnow()
+    db.session.commit()
+    return render_template("quiz_intro.html", title="Quiz", name=current_user.name)
+

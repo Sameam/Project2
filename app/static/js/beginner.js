@@ -2,6 +2,8 @@
 var quiz = document.getElementById('quiz');
 var results = document.getElementById('results');
 var submit = document.getElementById('check');
+var numCorrect = 0;
+
 
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
@@ -48,7 +50,6 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
     
     // keep track of user's answers
     var userAnswer = '';
-    var numCorrect = 0;
     
     // for each question...
     for(var i=0; i<questions.length; i++){
@@ -80,7 +81,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
 	// when user clicks submit, show results
 	submitButton.onclick = function(){
+    numCorrect = 0;
 		showResults(questions, quizContainer, resultsContainer);
+    AjaxSubmit() 
 	}
 }
 
@@ -176,7 +179,7 @@ var myQuestions = [
     correctAnswer: 'b'
   },
   {
-    question: "10. What is a single value estimate of parameter?",
+    question: "10. What is a single value estimate of parameter",
 		answers: {
 			a: 'Confidence Interval',
 			b: 'Sample error',
@@ -187,6 +190,19 @@ var myQuestions = [
   },
 ];
 
-
-
 generateQuiz(myQuestions, quiz, results, submit);
+
+function AjaxSubmit() {
+  var data = {
+    "score": numCorrect,
+  };
+  $.ajax({
+    type: 'POST',
+    url: '/score1',
+    data: data, 
+    dataType: 'json',
+    async : false,
+    success: function(data) { 
+    },
+  });
+}
