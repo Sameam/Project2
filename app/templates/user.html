@@ -32,8 +32,18 @@
           <div class="member-content">
             <h4> Current Progress with course </h4>
             <p>
-              Currently, at quiz level 1. 
-              <a href="{{ url_for('asessment')}}"><button type="button" class="btn btn-primary">Continue to quiz</button></a>
+              {% if current_user.score_1 == None and current_user.score_2 == None and current_user.score_3== None %}
+              Welcome!. Please select the course and take the quiz to track your progress <br><br>
+              <a href="{{ url_for('quiz')}}"><button type="button" class="btn btn-primary">Continue to quiz</button></a>
+              {% elif current_user.score_2 == None and current_user.score_3== None %}
+              Currently, at quiz level 1. <br><br>
+              <a href="{{ url_for('quiz')}}"><button type="button" class="btn btn-primary">Continue to quiz</button></a>
+              {% elif current_user.score_3== None %}
+              Currently, at quiz level 2. <br><br>
+              <a href="{{ url_for('quiz')}}"><button type="button" class="btn btn-primary">Continue to quiz</button></a>
+              {% elif current_user.score_1!= None and current_user.score_2 != None and current_user.score_3 != None %}
+              Currently, finished level 3 quiz. Congratulation. Well done !. 
+              {% endif %}
             </p>
           </div>
         </div>
@@ -45,8 +55,11 @@
             <h4>  </h4>
             <p>
              <ul>
+               {% if current_user.score_1 == None or current_user.score_2==None or current_user.score_3==None %}
                <li>Please continue your quiz study and quiz to further your study</li>
+               {% endif %}
                <li>Feel free to contact us if you have any questions regarding the study or feedback</li>
+               <li>We hope you enjoy your study with us. </li>
              </ul>
             </p>
           </div>

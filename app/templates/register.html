@@ -10,12 +10,13 @@
 </head>
 <body class="bk">
   <div class="login-container">
-    <div class="container  bg-warning opacity">
+    <div class="container background opacity size">
       {% block content %}
-      <h2>Register to<a class=login href="{{ url_for('index')}}"> HSS</a></h2>
+      <h2>Register to<a class=login href="{{ url_for('index')}}"> HSS</a></h2><br>
+      <p>Please follow the step and Enjoy our special course</p><br>
         <form action="" method="POST" novalidate>
           {{ form.hidden_tag() }}
-          <p>
+          <p class="sign">
               {{ form.name.label }}<br>
               {{ form.name(size=32) }}<br>
               {% for error in form.name.errors %}
@@ -50,7 +51,7 @@
             <span style="color: red;">{{ error }}</span>
             {% endfor %}
           </p>
-          <p>{{ form.submit() }}</p>
+          <p class="btn">{{ form.submit() }}</p>
           <p class="note pull-right"><a href="{{ url_for('login') }}">Already have an account? login</a></p><br><br>
         </form>
       {% endblock %}

@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="login-container">
-                        <div class="container-fluid bg-warning opacity">
+                        <div class="container-fluid background bg-warning opacity name">
                             <h2>Welcome to<a class=login href="{{ url_for('index')}}"> HSS</a></h2><hr>
                             <p>Sweat in exchange for harvest， study to obtain the knowledge.</p><br>
                             {% block content %}
@@ -39,8 +39,8 @@
                                         {% endfor %}   
                                     </div>
                                     <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-                                    <p>{{ form.submit() }}</p>
-                                    <p class="note pull-right"><a href="{{ url_for('register')}}">register</a></p><br><br>
+                                    <p class="btn">{{ form.submit() }}</p>
+                                    <p class="note pull-right"><a href="{{ url_for('register')}}">Register</a></p><br><br>
                                 </form>
                             {% endblock %}
                         </div>

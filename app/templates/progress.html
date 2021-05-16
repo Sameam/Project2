@@ -13,8 +13,16 @@
           <div class="content">
             <h3>Progress</h3>
             <p>
-                Welcome {{user}} <br>
+              Welcome {{user}} <br> 
+              {% if current_user.score_1==None and current_user.score_3 == None and current_user.score_2 == None %}
+              There are three levels quiz left. Please take the quiz. 
+              {% elif current_user.score_3 == None and current_user.score_2 == None %}
               You have completed level 1 quiz. There are still 2 more levels quiz to go. 
+              {% elif current_user.score_3 == None %}
+              You have completed level 1 and level 2 quiz. There are still 1 more level quiz to go. 
+              {% elif current_user.score_1 != None and current_user.score_2 != None and current_user.score_3 != None %}
+              You have sucessfully completed all the quiz. Congratulation. 
+              {% endif %}
             </p>
           </div>
         </div>
@@ -24,23 +32,41 @@
               <div class="col-xl-4 d-flex align-items-stretch">
                 <div class="icon-box mt-4 mt-xl-0">
                   <i class="bx bx-receipt"></i>
-                  <h4>Result</h4>
-                  <p>Your level 1 result quiz is <br>
-                      5 out of 10.</p>
+                  <h4>Level</h4>
+                  <p>
+                    {% if current_user.score_1 != None %}
+                    {{ user }} level 1 result quiz is
+                    {{current_user.score_1}} out of 10. 
+                    {% else %}
+                    {{ user }} need to complete test level 1. 
+                    {% endif %}
+                  </p>
                 </div>
               </div>
               <div class="col-xl-4 d-flex align-items-stretch">
                 <div class="icon-box mt-4 mt-xl-0">
                   <i class="bx bx-cube-alt"></i>
-                  <h4>Ranking</h4>
-                  <p>{{ user }} ranks number 20 out of 100 students in our class</p>
+                  <h4>Level</h4>
+                  <p>
+                    {% if current_user.score_2 != None %}
+                    {{ user }} level 2 result quiz is
+                    {{current_user.score_2}} out of 10. 
+                    {% else %}
+                    {{ user }} need to complete test level 2. 
+                    {% endif %}
+                  </p>
                 </div>
               </div>
               <div class="col-xl-4 d-flex align-items-stretch">
                 <div class="icon-box mt-4 mt-xl-0">
                   <i class="bx bx-images"></i>
-                  <h4>Advice</h4>
-                  <p>{{ user }} can through the lesson again or continue the quiz level 2</p>
+                  <h4>Level</h4>
+                  <p>{% if current_user.score_3 != None %}
+                    {{ user }} level 3 result quiz is
+                    {{current_user.score_3}} out of 10. 
+                    {% else %}
+                    {{ user }} need to complete test level 3. 
+                    {% endif %}</p>
                 </div>
               </div>
             </div>

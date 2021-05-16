@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>{{ title }}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'/>
+  <!-- Vendor CSS Files -->
+  <link href="/static/animate/bootstrap_animate/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/static/animate/bootstrap_animate/aos/aos.css" rel="stylesheet">
+  <link href="/static/animate/bootstrap_animate/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/animate/bootstrap_animate/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/animate/bootstrap_animate/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/animate/bootstrap_animate/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/static/animate/bootstrap_animate/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/static/css/main_style.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css" type='text/css'/>
+
+{% endblock %}
+
+{% block content %}
+<body class="bk">
+    <div class="container background opacity size move">
+      <div class="container margin">
+        <h2>Edit user profile</h2><br>
+        <form action="" method="post" novalidate>
+          {{ form.hidden_tag() }}
+          <div class="form-group">
+              <label for="usr">{{ form.name.label }}</label><br>
+              <p>{{ form.name(size=32) }}</p>
+          </div>  
+          <div class="form-group">
+            <label for="score1">{{ form.score_1.label }}</label><br>
+            <p>{{ form.score_1(size=32) }}</p>
+          </div>
+          <div class="form-group">
+            <label for="score2">{{ form.score_2.label }}</label><br>
+            <p>{{ form.score_2(size=32) }}</p>
+          </div>
+          <div class="form-group">
+            <label for="score3">{{ form.score_3.label }}</label><br>
+            <p>{{ form.score_3(size=32) }}</p>
+          </div>
+          <div class="form-group"></div>
+            <label for="score3">{{ form.feedback.label }}</label><br>
+            <p>{{ form.feedback(size=32)}}</p>
+            <p class="btn">{{ form.submit() }}</p>
+          </div>
+        </form>
+      </div>  
+    </div>
+</body>      
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block script %}
+<script src="/static/animate/bootstrap_animate/aos/aos.js"></script>
+  <script src="/static/animate/bootstrap_animate/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/animate/bootstrap_animate/purecounter/purecounter.js"></script>
+  <script src="/static/animate/bootstrap_animate/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+  <script src="/static/js/main.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/static/js/overall_main.js"></script>
+{% endblock %}

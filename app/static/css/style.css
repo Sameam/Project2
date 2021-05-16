@@ -1,8 +1,8 @@
-/*create a font for logo*/
+/* create a font for logo
 @font-face {
     font-family: Pacifico;
     src:url(../../fonts/Pacifico/Pacifico-Regular.ttf)
-}
+} */
 
 /*--------------------------------------------------------------
 # Introduction section for video
@@ -87,11 +87,12 @@ p.move {
 --------------------------------------------------------------*/
 
 .bk {
-    background-image: url('../images/loginbk.jpg');
+    background-image: url('../images/signup.jpg');
     background-size:cover;
     background-position:bottom;
     background-attachment: fixed;
 }
+
 
 /* login container style */
 .login-container{ 
@@ -110,11 +111,56 @@ p.move {
     text-decoration: none;
 }
 
-
-
 .opacity{
     opacity:0.8
 }
+
+.move {
+    margin-top: 80px;
+}
+
+/*--------------------------------------------------------------
+# for sign up
+--------------------------------------------------------------*/
+
+.size {
+    width: 460px;
+    margin-top: 60px;
+    margin-left: 850px;
+}
+
+.size h2{
+    text-align: center;
+}
+
+.name h2 {
+    text-align: center;
+}
+
+@media (max-width: 1368px) {
+    .size {
+        width: 500px;
+        margin-top: 50px;
+        margin-left: auto;
+    }
+}
+
+.btn {
+    font-family: sans-serif;
+    font-size: 15px;
+    color: black;
+    border: 10px;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+
+.background {
+    background-color: #B0C4DE;
+    
+}
+
 
 /*--------------------------------------------------------------
 # for hypothesis tab
@@ -200,7 +246,7 @@ a.button {
 }
 
   
-a #submit{
+a #check{
     font-family: sans-serif;
     font-size: 20px;
     background-color: #297;
@@ -213,7 +259,7 @@ a #submit{
 }  
 
   
-a #submit:hover{
+a #check:hover{
     background-color: #3a8;
 }
 
@@ -232,13 +278,16 @@ a #submit:hover{
 --------------------------------------------------------------*/
 
 .container .table {
-    margin-top: 10px;
+    margin-top: 50px;
+    width: 100%;
 }
 
 .tscore {
-    margin-top: 50px;
-    padding: 30px 0;
+    margin-top: 30px;
+    padding: 20px 0;
+    width:100%;
 }
+
 
 /*--------------------------------------------------------------
 # for user page 
@@ -313,4 +362,35 @@ p.inter{
     border-radius: 3px;
     padding: 7px;
     cursor: pointer;
+}
+
+
+/*--------------------------------------------------------------
+# edit form 
+--------------------------------------------------------------*/
+
+.bk .margin {
+    margin-top: 100px;
+}
+
+
+/*--------------------------------------------------------------
+# for show admin 
+--------------------------------------------------------------*/
+
+.admin p {
+    text-align: center;
+    font-size: 26pt;
+    background-color: #5fcf80;
+
+}
+
+.admin {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.ad h1 {
+    text-align: center;
+    font-size: 20pt;
 }

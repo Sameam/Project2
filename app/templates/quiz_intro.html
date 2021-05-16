@@ -6,7 +6,11 @@
 
 {% block content %}
 <div class="container questions">
+  {% if current_user.admin %}
+  <h2>Welcome {{name}} Admin</h2>
+  {% else %}
   <h2>Welcome {{name}}</h2>
+  {% endif %}
 </div>
 <div class="container instruction">
   <p>There are 3 levels in this quiz. Please follow the steps and instructions</p>
@@ -19,6 +23,8 @@
       <li>You can choose only one answer</li>
       <li>The quiz need to be done in one sitting</li>
       <li>You need to have a stable internet connect to perform the quiz</li>
+      <li>You need to finished all the levels to see your feedback from instructors</li>
+      <li>However, you can track your score for each test after you finished.</li>
     </ul>
     Please click Start under each level to start the quiz, click Cancel to back to study.
   </p>

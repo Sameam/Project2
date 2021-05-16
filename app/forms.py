@@ -32,3 +32,12 @@ class RegistrationForm(FlaskForm):
         user = Users.query.filter_by(phone=telephone.data).first()
         if user is not None:
           raise ValidationError('This telephone has already been registered. Please use a different telephone.')
+      
+      
+class editForm(FlaskForm):
+    name = StringField('Name', validators=[DataRequired()])
+    score_1 = IntegerField('Score_1', validators=[DataRequired()])
+    score_2 = IntegerField('Score_2', validators=[DataRequired()])
+    score_3 = IntegerField('Score_3', validators=[DataRequired()])
+    feedback = StringField('Feedback')
+    submit = SubmitField('Confirm')

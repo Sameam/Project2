@@ -34,15 +34,26 @@ This table includes 2 parts, part that are finished and still working on
 | Section | Comment | Conclusion |
 |:--------|:-------:|-----------:|
 | connect to CSS | for styling | Completed |
-| design | for navbar, opening, content | half completed | 
-| unit_testing | for login, signup | still working |
-| user_testing | for front_end | still working |
-| system_testing | for whole system | still working |
+| design | for navbar, opening, content | completed | 
+| unit_testing | for login, signup | completed |
+| system_testing | for whole system | completed |
 | button return back to opening page | for login and signup | completed | 
-| work on quiz | interactive and different levels | still working |
-| create a table | for admin and user to see score | still working | 
+| work on quiz | interactive and different levels | completed |
+| create a table | for admin and user to see score | completed | 
 | link for HSS | connect to opening page | Completed |
 | get start | link to login | Completed | 
-| Next previous button | link to next tab | still working |
 | design the quiz | interface | done
-| design interactive quiz | for each level | still need to work on advance level | 
+| design interactive quiz | for each level | completed | 
+
+
+Next tasks need to work on 
+ * pass the score to the database
+ * used jinja to make some identification for users
+ * work on readMe.md
+ * need to write test on login admin 
+
+ | Section | Comment | Conclusion |
+|:--------|:-------:|-----------:|
+| ajax| pass score to db | Completed |
+| jinja | for user modification | completed | 
+| test  | admin login | completed |
