@@ -1,0 +1,324 @@
+commit aa0adf7e4d395efbca69274d8020e0ecc3aa9f70
+Merge: a2ce1e9 35eec81
+Author: Nara <Sameam90@gmail.com>
+Date:   Mon May 17 13:43:30 2021 +0800
+
+    Final
+
+commit a2ce1e98592bfdd9fdb9bcb24f0cb60d30a8d6fb
+Author: Nara <Sameam90@gmail.com>
+Date:   Mon May 17 13:30:59 2021 +0800
+
+    delete a file
+
+commit 35eec818f83a22f5ef3d036aff9f19c71f598c9a
+Author: Nara <Sameam90@gmail.com>
+Date:   Mon May 17 13:22:13 2021 +0800
+
+    Final
+
+commit 17736c85d84cd799e7657e34f88a1307c0d76f50
+Merge: 7a13bf5 327983c
+Author: Nara <Sameam90@gmail.com>
+Date:   Sun May 16 22:35:29 2021 +0800
+
+    Merge branch 'master' of https://github.com/Sameam/upgraded-waddle
+
+commit 7a13bf58c9ed0144173dc4f9813b5a02eaf435e4
+Author: Nara <Sameam90@gmail.com>
+Date:   Sun May 16 22:25:45 2021 +0800
+
+    extra features and some rest api
+
+commit 2bb43000452007721ba45fd8b135e308a6db989d
+Author: Nara <Sameam90@gmail.com>
+Date:   Thu May 13 19:20:18 2021 +0800
+
+    some new design
+
+commit 798cee4221381dcddd19d68f693e223b39de9804
+Author: Nara <Sameam90@gmail.com>
+Date:   Thu May 13 13:44:01 2021 +0800
+
+    add content
+
+commit 19a2ffbd91e0d17679612a825ecdbb08bae6447f
+Author: Nara <Sameam90@gmail.com>
+Date:   Wed May 12 16:19:40 2021 +0800
+
+    testing
+
+commit 1bd20759e4c6b91714cbc59783b333cc30c6b48c
+Author: Nara <Sameam90@gmail.com>
+Date:   Tue May 11 22:04:20 2021 +0800
+
+    add intermediate and advance level quiz
+
+commit 78ec6a3520f9d243eb623742cb87492ee99940a5
+Author: Nara <Sameam90@gmail.com>
+Date:   Mon May 10 22:11:45 2021 +0800
+
+    Add templates and quiz questions
+
+commit 327983cdc92d62d2e96a31d1618eabe439a64ea0
+Author: Moss365 <82628786+Moss365@users.noreply.github.com>
+Date:   Fri May 7 16:12:39 2021 +0800
+
+    update .gitignore
+
+commit e6f37d8846dc822e2593582c479fbe9e970d2d44
+Author: Nara <Sameam90@gmail.com>
+Date:   Fri May 7 16:07:06 2021 +0800
+
+    front end design
+
+commit cdae91ce69b6a0275fdfbf49ddc860de8b23a81b
+Author: Moss365 <82628786+Moss365@users.noreply.github.com>
+Date:   Fri May 7 15:41:07 2021 +0800
+
+    change login for py file
+
+commit 5c6466ec413ea1ef045ec1bcd75151e4af27d8c1
+Author: Moss365 <82628786+Moss365@users.noreply.github.com>
+Date:   Fri May 7 15:40:31 2021 +0800
+
+    catch base html
+
+commit c4c1983e070e7f607979f98413a3d8274d5af391
+Author: Moss365 <82628786+Moss365@users.noreply.github.com>
+Date:   Fri May 7 15:39:39 2021 +0800
+
+    add login routes
+
+commit df784e4e86e9455691e9ccf100beb87783ba149a
+Author: Moss365 <82628786+Moss365@users.noreply.github.com>
+Date:   Fri May 7 15:39:14 2021 +0800
+
+    add login forms
+
+commit fe878bad432d38e54a3d66ec0790ae9fc738dc92
+Author: Moss365 <82628786+Moss365@users.noreply.github.com>
+Date:   Thu May 6 17:49:33 2021 +0800
+
+    Improve the login and registration background code
+
+commit a96772b6bd76b4b038c229323c51c5f78c13376e
+Author: Moss365 <82628786+Moss365@users.noreply.github.com>
+Date:   Thu May 6 16:58:01 2021 +0800
+
+    add database
+
+commit 935947104634c7d446c54fbfabaecce2596ff8c0
+Author: Nara <Sameam90@gmail.com>
+Date:   Mon May 3 13:49:46 2021 +0800
+
+    frontend design
+
+commit d65cf2003a33473ef918ffe27a4cbc37b4503582
+Author: Moss365 <82628786+Moss365@users.noreply.github.com>
+Date:   Sun May 2 14:20:07 2021 +0800
+
+    change main.py
+
+commit c90745c628d8f1aef7fe067b2c03313d3611fc46
+Author: Nara <Sameam90@gmail.com>
+Date:   Sat May 1 22:54:44 2021 +0800
+
+    add login and logout function
+
+commit 1ac525583982e72ec940110cbc203a3f57e1c4ff
+Author: Moss365 <82628786+Moss365@users.noreply.github.com>
+Date:   Sat May 1 15:21:08 2021 +0800
+
+    add confirm password
+
+commit 7058e6dcf5ade612d9a5a84f74df29c325d1050f
+Author: Nara <Sameam90@gmail.com>
+Date:   Wed Apr 28 10:27:06 2021 +0800
+
+    Add content and assessment
+
+commit 5f2b8b6d9669ea60985b65972ff7259f362acd17
+Author: Nara <Sameam90@gmail.com>
+Date:   Wed Apr 21 12:43:40 2021 +0800
+
+    Delete a template
+
+commit ca19de2fba895ebdb61d1d4a0a86b9f29f0f0aef
+Author: Nara <Sameam90@gmail.com>
+Date:   Tue Apr 20 23:29:37 2021 +0800
+
+    Connect to backend
+
+commit 3ba5defd38422ed9cefb4944cbf7efb87f4cc5a8
+Author: Nara <Sameam90@gmail.com>
+Date:   Sat Apr 17 22:18:20 2021 +0800
+
+    add font
+
+commit 0c6439ba6088d8128c6be0ac035bf7ee0c9e33a6
+Author: Nara <Sameam90@gmail.com>
+Date:   Sat Apr 17 22:17:38 2021 +0800
+
+    Make change to Navbar
+
+commit b4b58567493e7d067360b9f1168ec3f676200a77
+Author: Nara <Sameam90@gmail.com>
+Date:   Sat Apr 17 21:34:08 2021 +0800
+
+    Adding New information
+
+commit 3251c1dde700498acb012096bfb5829ffab6d056
+Merge: 7bb59ac 085f91b
+Author: Moss365 <82628786+Moss365@users.noreply.github.com>
+Date:   Sat Apr 17 16:06:42 2021 +0800
+
+    Merge pull request #3 from Sameam/Yao
+    
+    Improved the visual effect of the login and logout interface, and add…
+
+commit 085f91b06a90917c312de4a79f32d06c74ca352f
+Author: Yao <1132674385@qq.com>
+Date:   Sat Apr 17 16:04:53 2021 +0800
+
+    Improved the visual effect of the login and logout interface, and added image files
+
+commit 7bb59acb8fea6944ff3ef293e9acbbcaa22973a5
+Merge: 49e9c05 47e6fca
+Author: Nara <Sameam90@gmail.com>
+Date:   Fri Apr 16 16:06:39 2021 +0800
+
+    Merge branch 'main' into Yao
+
+commit 49e9c05882b2e6a7625066e6c35c85d6e69d7acd
+Author: Yao <1132674385@qq.com>
+Date:   Fri Apr 16 16:02:30 2021 +0800
+
+    add register
+
+commit 47e6fcab56898e9c584274b4c3d54eddee54aede
+Author: Nara <Sameam90@gmail.com>
+Date:   Fri Apr 16 15:52:08 2021 +0800
+
+    New function
+
+commit 3c1a82238ec1476c97071dd97858767871793823
+Author: Nara <Sameam90@gmail.com>
+Date:   Fri Apr 16 15:02:15 2021 +0800
+
+    Adding new function
+
+commit adcef75c7bc954434983afffec1631fdc5f3ce00
+Author: Nara <Sameam90@gmail.com>
+Date:   Fri Apr 16 14:35:45 2021 +0800
+
+    New files
+
+commit 65b90025b1865430cac868f444f9629b5f35b62d
+Merge: 9feb742 b4195a6
+Author: Nara <Sameam90@gmail.com>
+Date:   Fri Apr 16 14:32:07 2021 +0800
+
+    Merge branch 'main' of https://github.com/Sameam/upgraded-waddle into main
+
+commit 9feb7425483f21c2a37fc8b5698e03ec79a89e60
+Author: Nara <Sameam90@gmail.com>
+Date:   Fri Apr 16 14:30:48 2021 +0800
+
+    Adding new function
+
+commit b4195a6b17a686c7b06718e3dc63a4ba6b459788
+Merge: 58ed23a 742b1ce
+Author: Moss365 <82628786+Moss365@users.noreply.github.com>
+Date:   Fri Apr 16 14:29:34 2021 +0800
+
+    Merge pull request #2 from Sameam/Yao
+    
+    Yao
+
+commit 742b1ce925b7ef36713c22db17bfbbb575d6b7bb
+Author: Yao <1132674385@qq.com>
+Date:   Fri Apr 16 14:27:58 2021 +0800
+
+    login demo
+
+commit 2a8915221f27ed6b0a2f531abcff2f590b24883f
+Author: Yao <1132674385@qq.com>
+Date:   Fri Apr 16 13:43:58 2021 +0800
+
+    remove a file
+
+commit 9fedfba3eae676a2a3b8d1303651ec40a4c83bda
+Author: Yao <1132674385@qq.com>
+Date:   Fri Apr 16 13:41:48 2021 +0800
+
+    remove try
+
+commit a73490322a3404da4a257f703e16fb663c1c961c
+Author: Yao <1132674385@qq.com>
+Date:   Fri Apr 16 13:39:36 2021 +0800
+
+    try it
+
+commit 58ed23aa32bb3d6f58735ee6544932413f7b5220
+Author: Nara <Sameam90@gmail.com>
+Date:   Fri Apr 16 13:35:56 2021 +0800
+
+    Remove a file
+
+commit c1afce4b5e42bbacbcd2f61ac68dbd4e380f98a4
+Author: Nara <Sameam90@gmail.com>
+Date:   Fri Apr 16 13:34:57 2021 +0800
+
+    Remove a file
+
+commit 4419d1a60a71de4f7935ac576a8665b7cc1acd28
+Merge: 8e17daf 19797c5
+Author: Moss365 <82628786+Moss365@users.noreply.github.com>
+Date:   Fri Apr 16 12:26:13 2021 +0800
+
+    Merge pull request #1 from Sameam/Yao
+    
+    hello
+
+commit 19797c5630c787a1593408ad0b810e8c5604a91b
+Author: Yao <1132674385@qq.com>
+Date:   Fri Apr 16 12:23:59 2021 +0800
+
+    hello
+
+commit 8e17daf8787de1d0a835508b7b2816e8af9876d7
+Author: Yao <1132674385@qq.com>
+Date:   Fri Apr 16 12:17:26 2021 +0800
+
+    hello,Sam
+
+commit 0634715e06bbab19903a4182b8e629a0228460ee
+Author: Nara <Sameam90@gmail.com>
+Date:   Fri Apr 16 12:09:51 2021 +0800
+
+    New file
+
+commit 64487d5a2dc36ff8fc8ad292d611859ca37b9182
+Author: Nara <Sameam90@gmail.com>
+Date:   Fri Apr 16 11:50:35 2021 +0800
+
+    add one templates
+
+commit 026a7dd7e2bb9182ed068fac6920d55788c5254b
+Author: Nara <Sameam90@gmail.com>
+Date:   Fri Apr 16 11:39:51 2021 +0800
+
+    Add templates
+
+commit 8b56eb2d6ad0491c93343f33cdbefb2b1fb32e11
+Author: Nara <Sameam90@gmail.com>
+Date:   Fri Apr 16 11:19:46 2021 +0800
+
+    New files
+
+commit 88d60ce2ae901d51b3e553c21e0741bb26f69c76
+Author: Nara <Sameam90@gmail.com>
+Date:   Fri Apr 16 10:47:34 2021 +0800
+
+    first commit
