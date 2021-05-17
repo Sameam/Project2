@@ -52,7 +52,9 @@ class TestBase(unittest.TestCase):
       self.skipTest('Web browser not available')
     else:
       db.init_app(app)
-      db.drop_all()
+      db.session.query(Users).delete()
+      db.session.commit()
+      db.session.remove()
       db.create_all()
       
       self.admin = Users(name=test_admin_name,password=test_admin_password,email=test_admin_email,phone=test_admin_phone,admin=True)

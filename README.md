@@ -49,8 +49,16 @@ How to run test cases.
 For testing, we first need to open __init__.py and change app.config.from_object(Config) to app.config.from_object('config.TestingConfig'). This will create a test.db which is a testing database. 
 1. Front_end test case
 * **Make sure that your server is up and running. You can do flask run first in one of your terminal or cmd. Then**
+* ---->Please make sure that download the correct the chrome driver for your device, before you start for all operating system. 
+* Please visit this website for specific documentation https://www.selenium.dev/downloads/
+* Please go to this website for your correct chrome according to operating system. https://chromedriver.storage.googleapis.com/index.html?path=90.0.4430.24/
 * ---->python test_front_end.py(for window)
 * ---->python3 test_front_end.py(for Mac/Linux)
+    * ---->For mac, you can download according whether you are using M1 or Intel .
+    * ---->After that, in your terminal you need unzip filename that you download 
+    * ---->then, you need sudo mv chromedriver /usr/local/bin 
+    * ---->then, sudo chmod +x /usr/local/bin/chromedriver
+    * ---->finally, you can python3 test_front_end.py
 2. Back_end test case
 * ---->python test_back_end.py(for window)
 * ---->python3 test_back_end.py(for Mac/Linux)

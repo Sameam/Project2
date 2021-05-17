@@ -89,8 +89,11 @@ def edit_users(user_id):
     if user.admin:
         form = editForm()
         student = Users.query.filter(Users.id==user_id).first()
+        name = student.name
+        score_1 = student.score_1
+        score_2 = student.score_2
+        score_3 = student.score_3
         if form.validate_on_submit():
-            student.name = form.name.data
             student.name = form.name.data
             student.score_1 = form.score_1.data
             student.score_2 = form.score_2.data
@@ -98,7 +101,8 @@ def edit_users(user_id):
             student.feedback = form.feedback.data
             db.session.commit()
             return redirect(url_for('result'))  
-    return render_template('edit.html',title="Edit", form=form)
+    return render_template('edit.html',title="Edit", form=form, name = name,score_1 = score_1,
+                          score_2 = score_2,score_3 = score_3)
 
 @app.route("/user")
 @login_required 

@@ -39,19 +39,19 @@
         <form action="" method="post" novalidate>
           {{ form.hidden_tag() }}
           <div class="form-group">
-              <label for="usr">{{ form.name.label }}</label><br>
+              <label for="usr">{{ form.name.label }} : {{ name }}</label><br>
               <p>{{ form.name(size=32) }}</p>
           </div>  
           <div class="form-group">
-            <label for="score1">{{ form.score_1.label }}</label><br>
+            <label for="score1">{{ form.score_1.label }} : {{score_1}}</label><br>
             <p>{{ form.score_1(size=32) }}</p>
           </div>
           <div class="form-group">
-            <label for="score2">{{ form.score_2.label }}</label><br>
+            <label for="score2">{{ form.score_2.label }} : {{score_2}}</label><br>
             <p>{{ form.score_2(size=32) }}</p>
           </div>
           <div class="form-group">
-            <label for="score3">{{ form.score_3.label }}</label><br>
+            <label for="score3">{{ form.score_3.label }} : {{score_3}}</label><br>
             <p>{{ form.score_3(size=32) }}</p>
           </div>
           <div class="form-group"></div>
