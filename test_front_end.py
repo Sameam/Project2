@@ -52,14 +52,8 @@ class TestBase(unittest.TestCase):
       self.skipTest('Web browser not available')
     else:
       db.init_app(app)
-      db.session.query(Users).delete()
-      db.session.commit()
-      db.session.remove()
       db.create_all()
       
-      self.admin = Users(name=test_admin_name,password=test_admin_password,email=test_admin_email,phone=test_admin_phone,admin=True)
-      db.session.add(self.admin)
-      db.session.commit()
       self.driver.maximize_window()
       self.driver.get(BASE_URL)
       time.sleep(1)

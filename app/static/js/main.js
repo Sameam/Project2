@@ -61,7 +61,7 @@ const chart = new Chart(ctx, {
     datasets: [{
       label: 'Age groups',
       data: [3,6,19, 28, 32, 26,17,5,2],
-      backgroundColor: 'red',
+      backgroundColor: 'green',
     }]
   },
   options: {

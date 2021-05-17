@@ -19,12 +19,11 @@ How to Start the Project:
     * pip3 install -r requirements.txt (In mac)
     * sudo pip3 install -r requirments.txt (In Linux)
 6. There will need to be create a database first. 
-    * To create a database, flask db init 
+    To create a database: 
+    * flask db init 
     * flask db migrate -m "name for the table"
     * flask db upgrade
 7. To run the server type the command
-    * set FlASK_APP=app(for window)
-    * export FLASK_APP=app (for Mac/Linux)
     * flask run 
 
 Your Project will get start
@@ -38,8 +37,8 @@ There are two panels inside the projects:
 
 How To Create An Admin User
 1. Run The Command 
-* ---->python createsuperuser.py(In windows)
-* ---->sudo python3 createsuperuser.py (In Linux)
+* ---->python createSuperUser.py(In windows)
+* ---->sudo python3 createSuperUser.py (In Linux)
 * ---->python3 createSuperUser.py (In Mac)
 Enter the details asked by the Command Prompt
 It will create a new super user.
